@@ -1,15 +1,44 @@
 #include <algorithm>
 #include <iostream>
-#include <iterator>
 #include <vector>
+using namespace std::literals ;
+
+for (i = 0; i < count; ++i) {
+    
+}
+    
+}
+
+int input(){
+    int num;
+    std::cin >> num;
+    return num;
+}
+
+std::vector<int> while_input(){
+    int x;
+    std::vector<int> v;
+    while ((x = input()) != 0) {
+        v.push_back(x);
+    }
+    return v;
+}
+
+std::vector<int> sort(std::vector<int> v){
+    std::size_t size = v.size();
+    return v;
+}
+
+void output(std::vector<int> v){
+    for (std::size_t i = 0; i < v.size(); ++i) {
+        std::cout << v.at(i) << "\n"s;
+    }
+}
+
 int main(){
-    auto print = [](auto value){std::cout << value << "\n";};
-    std::vector<int> v = {1, 2, 3, 4, 5};
-    auto gen_zero = [](auto value){return &value;};
-    std::generate(std::begin(v), std::end(v), gen_zero);
-    std::for_each(std::begin(v), std::end(v), print);
-    // std::for_each(std::begin(v), std::end(v), print);
-    // std::vector<int> s = std::for_each(std::begin(v), std::end(v), gen_tra);
-    // std::for_each(std::begin(v), std::end(v), [](auto value){std::cout<< value << ", "s;});
-    // std::for_each(std::begin(v), std::end(v), [](auto &value){value = value + 3;});
+    for (i=0; condition; inc-expression) {
+    statements
+    }
+    std::vector<int> v = while_input();
+    output(v);
 }
