@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -22,6 +23,7 @@ void sg(int &h1, int &w1, int &h2, int &w2,
 
 bool is_valid_move(const std::vector<std::string> &board,
                    vector<vector<bool> > &checked, int h, int w) {
+
     int H = board.size();
     int W = board.at(0).size();
     std::cout << h << ", " << w << std::endl;
