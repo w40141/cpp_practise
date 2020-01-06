@@ -24,6 +24,7 @@ bool is_valid_move(const std::vector<std::string> &board,
                    vector<vector<bool> > &checked, int h, int w) {
     int H = board.size();
     int W = board.at(0).size();
+    std::cout << h << ", " << w << std::endl;
 
     if (h < 0 || H <= h || w < 0 || W <= w) return false;
     if (board.at(h).at(w) == '#') return false;
