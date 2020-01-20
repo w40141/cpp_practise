@@ -30,10 +30,18 @@ int main(int argc, char *argv[])
         ll bit_boy = (1 << sub_boys) - 1;
         for (; bit_boy < (1 << boys); bit_boy = next_combination(bit_boy)) {
 
+            // std::cout << bit_girl << " " << bit_boy << std::endl;
             int tmp_ans = 0;
-            for (int girl = 0; girl < girls; ++girl) {
-                for (int boy = 0; boy < boys; ++boy) {
-                    if (bit_girl & (1 << girl) && bit_boy & (1 << boy)) {
+            int girl;
+            if (bit_girl & 1) girl = 0;
+            else girl = (bit_girl & ~bit_girl) / 2;
+            for (; girl < girls; ++girl) {
+                int boy;
+                if (bit_boy & 1) boy = 0;
+                else boy = (bit_boy & ~bit_boy) / 2;
+                for (; boy < boys; ++boy) {
+                    if ((bit_girl & (1 << girl)) && (bit_boy & (1 << boy))) {
+                        // std::cout << girl << " " << boy << std::endl;
                         tmp_ans += choco_to_you[girl][boy];
                     }
                 }
